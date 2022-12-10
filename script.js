@@ -49,13 +49,21 @@ function game(){
     let player = 0
     let computer = 0
     while (keepPlaying) {
-        round += 1
-        if (round > 4) keepPlaying = false
+        if (++round > 4) keepPlaying = false
         roundWinner = playRound(askUser(), getComputerChoice())
-        if (roundWinner === "player") player++
-        else if (roundWinner === "computer") computer++
+        if (roundWinner === "player") {
+            player++
+            console.log("You won this round!")
+        }
+        else if (roundWinner === "computer") {
+            computer++
+            console.log("Computer won this round!")
+        }
+        else {
+            console.log("No winner this round.")
+        }
     }
-    return findWinner(player,computer) + " won!"
+    return findWinner(player,computer) + " won the game!"
 }
 function askUser(){
     const playerSelection = prompt("Wanna play as Cana, Canser or Elfman?")
