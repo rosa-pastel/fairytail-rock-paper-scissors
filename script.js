@@ -54,6 +54,9 @@ function game(event){
     player = 0
     computer = 0
     }
+    else{
+        gameResult.textContent = ""
+    }
 }
 
     let round = 1
