@@ -3,19 +3,16 @@ function getComputerChoice(){
     switch(randomNumber){
         case 1:
             return "elfman"
-            break
         case 2:
             return "cana"
-            break
         case 3:
             return "cancer"
-            break
     }
 }
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase()
     computerSelection = computerSelection.toLowerCase()
-    let winner
+    let winner = "nobody"
     if (playerSelection === "cana") {
             if (computerSelection === "elfman") winner = "player"
             else if (computerSelection === "cancer") winner = "computer"
@@ -28,7 +25,6 @@ function playRound(playerSelection, computerSelection){
             if (computerSelection === "cana") winner = "player"
             else if (computerSelection === "elfman") winner = "computer"
     }
-    else winner = ""
     return winner
 }
 function findWinner(player, computer){
@@ -42,31 +38,32 @@ function findWinner(player, computer){
         return "Peace"
     }
 }
-function game(){
-    let round = 0
-    let keepPlaying = true
-    let roundWinner
+function game(event){
+    let playerSelection = event.currentTarget.id
+    let roundWinner = playRound(playerSelection, getComputerChoice())
+    if (roundWinner == 'player') {
+        player++
+    }
+    else if (roundWinner == 'computer') {
+        computer++
+    }
+    result.textContent = "Winner of the round is " + roundWinner + "!"
+    if(round++ >= 5){
+    gameResult.textContent = findWinner(player,computer) + " won the game!"
+    round = 1
+    player = 0
+    computer = 0
+    }
+}
+
+    let round = 1
     let player = 0
     let computer = 0
-    while (keepPlaying) {
-        if (++round > 4) keepPlaying = false
-        roundWinner = playRound(askUser(), getComputerChoice())
-        if (roundWinner === "player") {
-            player++
-            console.log("You won this round!")
-        }
-        else if (roundWinner === "computer") {
-            computer++
-            console.log("Computer won this round!")
-        }
-        else {
-            console.log("No winner this round.")
-        }
-    }
-    return findWinner(player,computer) + " won the game!"
-}
-function askUser(){
-    const playerSelection = prompt("Wanna play as Cana, Canser or Elfman?")
-    return playerSelection
-}
-console.log(game())
+    const cana = document.querySelector('#cana')
+    const elfman = document.querySelector('#elfman')
+    const cancer = document.querySelector('#cancer')
+    const result = document.querySelector('.result')
+    const gameResult = document.querySelector('.game-result')
+    cana.addEventListener('click', game)
+    elfman.addEventListener('click', game)
+    cancer.addEventListener('click', game)
