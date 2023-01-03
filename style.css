@@ -6,11 +6,17 @@
 }
 .result,
 .game-result,
+.vs,
 .round{
     color: whitesmoke;
     text-align: center;
+    padding: 10px;
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.vs{
+    padding-bottom: 30px;
+    font-size: 200%;
 }
 #container>div{
     display: flex;
@@ -25,8 +31,11 @@ button{
     font-family: 'Courier New', Courier, monospace;
     font-size: 125%;
 }
-button:hover{
+#container>div:hover{
     font-size: 150%;
+    cursor: pointer;
+}
+#container button:hover{
     cursor: pointer;
 }
 img{
@@ -46,6 +55,7 @@ h1{
     background-color:black;
     color: whitesmoke;
     margin: 50px;
+    margin-bottom: 0;
     height: 100px;
     text-align: center;
 }

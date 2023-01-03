@@ -10,8 +10,6 @@ function getComputerChoice(){
     }
 }
 function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.toLowerCase()
-    computerSelection = computerSelection.toLowerCase()
     let winner = "nobody"
     if (playerSelection === "cana") {
             if (computerSelection === "elfman") winner = "player"
@@ -39,8 +37,10 @@ function findWinner(player, computer){
     }
 }
 function game(event){
-    let playerSelection = event.currentTarget.id
-    let roundWinner = playRound(playerSelection, getComputerChoice())
+    let playerSelection = event.currentTarget.id.toLowerCase()
+    let computerSelection = getComputerChoice()
+    vs.textContent = playerSelection.toUpperCase() + " vs " + computerSelection.toUpperCase()
+    let roundWinner = playRound(playerSelection, computerSelection)
     if (roundWinner == 'player') {
         player++
     }
@@ -75,3 +75,4 @@ function game(event){
     cancer.addEventListener('click', game)
     const roundDiv = document.querySelector('#round-number')
     const h1 = document.querySelector('h1')
+    const vs = document.querySelector('.vs')
