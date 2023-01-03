@@ -23,10 +23,10 @@ button{
     background-color: black;
     border: none;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
+    font-size: 125%;
 }
 button:hover{
-    font-size: 35px;
+    font-size: 150%;
     cursor: pointer;
 }
 img{
@@ -42,11 +42,10 @@ body{
 }
 h1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 50px;
+    font-size: 250%;
     background-color:black;
     color: whitesmoke;
     margin: 50px;
-    margin-bottom: 0;
     height: 100px;
     text-align: center;
 }
