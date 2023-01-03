@@ -6,11 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <button id="cana">Cana</button>
-    <button id="elfman">Elfman</button>
-    <button id="cancer">Cancer</button>
+    <h1>CHOOSE YOUR FIGHTER!</h1>
+    <div class="round">ROUND</div>
+    <div class="round" id="round-number">1</div>
+    <div id="container">
+        <div>
+            <img src="./images/cana.gif">
+            <button id="cana">Cana</button>
+        </div>
+        <div>
+            <img src="./images/elfman.gif">
+            <button id="elfman">Elfman</button>
+        </div>
+        <div>
+            <img src="./images/cancer.gif">
+            <button id="cancer">Cancer</button>
+        </div>
+    </div>
     <div class="result"></div>
     <div class="game-result"></div>
 </body>

@@ -53,9 +53,12 @@ function game(event){
     round = 1
     player = 0
     computer = 0
+    h1.textContent = 'GAME OVER'
     }
     else{
         gameResult.textContent = ""
+        h1.textContent = "CHOOSE YOUR FIGHTER!"
+        roundDiv.textContent = round
     }
 }
 
@@ -70,3 +73,5 @@ function game(event){
     cana.addEventListener('click', game)
     elfman.addEventListener('click', game)
     cancer.addEventListener('click', game)
+    const roundDiv = document.querySelector('#round-number')
+    const h1 = document.querySelector('h1')
