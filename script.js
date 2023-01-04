@@ -68,6 +68,27 @@ function game(event){
     const cana = document.querySelector('#cana')
     const elfman = document.querySelector('#elfman')
     const cancer = document.querySelector('#cancer')
+    const canaimg = document.querySelector('#cana>img')
+    const elfmanimg = document.querySelector('#elfman>img')
+    const cancerimg = document.querySelector('#cancer>img')
+    canaimg.addEventListener('mouseover',()=>{
+        canaimg.setAttribute('src',"./images/cana.gif")
+    })    
+    canaimg.addEventListener('mouseout',()=>{
+        canaimg.setAttribute('src',"./images/cana.png")
+    })    
+    elfmanimg.addEventListener('mouseover',()=>{
+        elfmanimg.setAttribute('src',"./images/elfman.gif")
+    })    
+    elfmanimg.addEventListener('mouseout',()=>{
+        elfmanimg.setAttribute('src',"./images/elfman.png")
+    })       
+    cancerimg.addEventListener('mouseover',()=>{
+        cancerimg.setAttribute('src',"./images/cancer.gif")
+    })    
+    cancerimg.addEventListener('mouseout',()=>{
+        cancerimg.setAttribute('src',"./images/cancer.png")
+    })       
     const result = document.querySelector('.result')
     const gameResult = document.querySelector('.game-result')
     cana.addEventListener('click', game)
