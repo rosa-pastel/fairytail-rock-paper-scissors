@@ -47,17 +47,19 @@ function game(event){
     else if (roundWinner == 'computer') {
         computer++
     }
-    result.textContent = "Winner of the round is " + roundWinner + "!"
+    result.textContent = "Winner of the round is " + roundWinner + "."
     if(round++ >= 5){
-    gameResult.textContent = findWinner(player,computer) + " won the game!"
+    gameResult.textContent = (findWinner(player,computer) == 'Player') ?
+                            'YOU WIN'
+                            : 'COMPUTER WINS'
     round = 1
     player = 0
     computer = 0
-    h1.textContent = 'GAME OVER'
+    h1.textContent = 'GAME OVER!'
     }
     else{
-        gameResult.textContent = ""
-        h1.textContent = "CHOOSE YOUR FIGHTER!"
+        gameResult.textContent = '\u00A0' 
+        h1.textContent = "CHOOSE YOUR FIGHTER"
         roundDiv.textContent = round
     }
 }

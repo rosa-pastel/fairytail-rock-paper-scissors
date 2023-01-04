@@ -3,6 +3,7 @@ flexbox
 */
 #container{
     display: flex;
+    justify-content: center;
 }
 #container>div{
     display: flex;
@@ -19,35 +20,71 @@ flexbox
 other styles
 */
 body{
-    background-color: black;
+    background-image: url("./images/magnolia.jpg");
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-h1,
-#container,
-.result,
-.game-result,
-#round,
-#round-number{
-    margin: 4vh 0;
-    font-size: 2.5vw;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    color: whitesmoke;
-}
-#round,
-#round-number{
-    margin-bottom: 1vw;
-    margin-top: 1vw;
+.white{
+    box-sizing: border-box;
+    padding-top: 5vh;
+    max-width: 1000px;    margin: auto;
+    align-self: center;
+    padding: 5vh;
+    background-color: rgba(245, 245, 245, 90%);
 }
 h1{
-    font-size: 5vw;
+    flex: 1;
+    margin: auto;
+    align-self: flex-end;
+    font-size: 5vh;
+}
+.white>*{
+    margin-top: 4vh;
+    font-size: 2.5vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: black;
+}
+#round,
+#round-number{   
+    margin-bottom: 0.5vw;
+    margin-top: 0.5vw; 
+    text-align: left;
+    text-shadow: 0 0 2px whitesmoke;
+}
+#header{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: black;
+    font-weight: 100;
 }
 button{
+    height: 5vh;
     border: none;
-    font-size: 2vw;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2vh;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
     padding: 1vh;
-    background-color: whitesmoke;
+    color: whitesmoke;
 }
 #container>div:hover,
 #container>div>button:hover{
-    cursor: pointer;}
+    cursor: pointer;
+}
+#container>div>button:hover{
+    font-size: 2.5vh;
+}
+.footer{
+    box-sizing: border-box;
+    max-width: 1000px;  
+    align-self: center;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    background-color: whitesmoke;
+    justify-self: flex-end;
+}
