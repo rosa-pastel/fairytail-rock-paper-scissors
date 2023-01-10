@@ -19,17 +19,29 @@ flexbox
 /*
 other styles
 */
+@font-face {
+    font-family: montserrat;
+    src: url(./fonts/MontserratSemibold-8M8PB.otf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: montserrat;
+    src: url(./fonts/MontserratLight-6YemM.otf);
+    font-weight: 100;
+}
 body{
     background-image: url("./images/magnolia.jpg");
     margin: 0 auto;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: montserrat, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .white{
     box-sizing: border-box;
     padding-top: 5vh;
-    max-width: 1000px;    margin: auto;
+    max-width: 1000px;    
+    margin: auto;
     align-self: center;
     padding: 5vh;
     background-color: rgba(245, 245, 245, 90%);
@@ -44,9 +56,9 @@ h1{
 .white>*{
     margin-top: 4vh;
     font-size: 2.5vh;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     color: black;
+    font-weight: bold;
 }
 #round,
 #round-number{   
@@ -60,14 +72,14 @@ h1{
     max-width: 1000px;
     margin: 0 auto;
     color: black;
-    font-weight: 100;
 }
 button{
     height: 5vh;
     border: none;
     font-size: 2vh;
+    font-family: inherit;
+    font-weight: 100;
     background-color: black;
-    font-family: 'Courier New', Courier, monospace;
     padding: 1vh;
     color: whitesmoke;
 }
@@ -83,9 +95,13 @@ button{
     max-width: 1000px;  
     align-self: center;
     text-align: center;
-    padding: 15px;
+    padding: 15px 45px;
     margin: 0 auto;
     margin-bottom: 5vh;
     background-color: whitesmoke;
     justify-self: flex-end;
+}
+.result,
+.game-result{
+    font-weight: 100;
 }
